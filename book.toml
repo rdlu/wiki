@@ -1,5 +1,5 @@
 [book]
-title = "CodeForLike Docs"
+title = "CodeForLife Docs"
 authors = ["rdlu"]
 language = "en"
 multilingual = false
@@ -7,3 +7,8 @@ src = "src"
 
 [build]
 build-dir = "public"
+
+[output.html]
+preferred-dark-theme = "ayu"
+default-theme = "ayu"
+google-analytics = "UA-163442290-1"
