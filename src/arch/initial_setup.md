@@ -41,15 +41,17 @@ Be careful with %wheel, I prefer to put just myself :D
 
 ## Using my .dotfiles with TMUX and Fish Shell
 
-    cd
-    git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-    git clone https://gitlab.com/rdlu/dotfiles.git .dotfiles
-    ln -s ~/.dotfiles/tmux.conf .tmux.conf
-    tmux source ~/.tmux.conf
-    ln -s ~/.dotfiles/fish/config.fish ~/.config/fish/config.fish
-    ln -s ~/.dotfiles/fish/omf ~/.config/omf
-    curl -L https://get.oh-my.fish | fish
-    sudo chsh (whoami) -s /usr/bin/fish
+```sh
+cd
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+git clone https://gitlab.com/rdlu/dotfiles.git .dotfiles
+ln -s ~/.dotfiles/tmux.conf .tmux.conf
+tmux source ~/.tmux.conf
+ln -s ~/.dotfiles/fish/config.fish ~/.config/fish/config.fish
+ln -s ~/.dotfiles/fish/omf ~/.config/omf
+curl -L https://get.oh-my.fish | fish
+sudo chsh (whoami) -s /usr/bin/fish
+```
 
 After that restart your fish prompt and:
     

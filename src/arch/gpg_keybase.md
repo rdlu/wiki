@@ -44,6 +44,10 @@ Now logout and login again, or event better, reboot your machine. Check your SSH
     ssh-add -l
 
 If you are getting errors like error fetching identities: agent refused operation then you need to remove offending keys that are not **A**uthorization keys.
-You cna check them wirth:
+You can check them with:
 
     gpg --list-keys --with-keygrip
+
+Then comment out the keys with `#` or remove auth with `!` at  `~/.gnupg/sshcontrol`:
+
+    micro ~/.gnupg/sshcontrol
