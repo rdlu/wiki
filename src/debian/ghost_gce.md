@@ -1,5 +1,3 @@
-# Debian Based
-
 ## Configure a Ghost Blog at GCE
 
 ### Node + Yarn + Requisites
