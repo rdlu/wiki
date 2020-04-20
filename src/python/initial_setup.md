@@ -9,6 +9,6 @@
 
 #### For development
 
-    yay -S python-flask python-django
+    yay -S python-flask python-django python-bcrypt
 
 More to come

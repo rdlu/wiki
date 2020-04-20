@@ -8,6 +8,10 @@ src = "src"
 [build]
 build-dir = "public"
 
+[preprocessor.toc]
+command = "mdbook-toc"
+renderer = ["html"]
+
 [output.html]
 preferred-dark-theme = "ayu"
 default-theme = "ayu"

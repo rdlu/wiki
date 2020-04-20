@@ -1,3 +1,5 @@
+<!-- toc -->
+
 # ArchLinux | Manjaro Based Setup
 
 Tips and tricks for a ideal initial setup
