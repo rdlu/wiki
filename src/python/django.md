@@ -25,7 +25,7 @@ It's boring to copy and paste the token everytime you start the notebook to the 
 
 _ps: disabling jupyter security does not work currently in vscode_
 
-# With a Password 
+#### With a Password 
 A nice trick is to set a password instead copying and pasting the `jupyter` token everytime you starts it, because jupyter changes it everytime you starts it.
 
 Run this:
@@ -36,7 +36,7 @@ jupyter notebook password
 
 To define a local password. This way VSCode will ask your password at least 4 times, but with a known value.
 
-# With a fixed token
+#### With a fixed token
 
 Open `~/.jupyter/jupyter_notebook_config.json` with your favorite editor then paste:
 
