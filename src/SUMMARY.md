@@ -6,6 +6,7 @@
   - [GPG, SSH Auth with Keybase](arch/gpg_keybase.md)
 - [Python Tips](python/initial_setup.md)
   - [VirtualEnvs](python/virtualenv.md)
+  - [Django](python/django.md)
 - [Other Data Tools](dataops/setup.md)
   - [Redshift](dataops/redshift.md)
   - [MySQL](dataops/mysql.md)

@@ -4,6 +4,8 @@
 
 Tips and tricks for a ideal initial setup
 
+<!-- toc -->
+
 ## Ranking mirrors for faster downloads
 
 ### Manjaro

@@ -2,7 +2,7 @@
 
 ## VirtualEnvs on Fish Shell
 
-First you need to use [oh my fish](https://github.com/oh-my-fish/oh-my-fish), preferably with my [.dotfiles](../arch/initial_setup.md#Using my .dotfiles with TMUX and Fish Shell)
+First you need to use [oh my fish](https://github.com/oh-my-fish/oh-my-fish), preferably with my [.dotfiles](../arch/initial_setup.md#using-my-dotfiles-with-tmux-and-fish-shell)
 
     omf install virtualfish
     pip install virtualfish
