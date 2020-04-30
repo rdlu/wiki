@@ -19,13 +19,14 @@ INSTALLED_APPS = [
     'django_extensions',
 ```
 
-### Setting a fixed authentication 
+### Setting a fixed authentication
 
 It's boring to copy and paste the token everytime you start the notebook to the VSCode, so we have two ways:
 
-_ps: disabling jupyter security does not work currently in vscode_
+ps: _disabling jupyter security does not work currently in vscode_
 
-#### With a Password 
+#### With a Password
+
 A nice trick is to set a password instead copying and pasting the `jupyter` token everytime you starts it, because jupyter changes it everytime you starts it.
 
 Run this:
@@ -40,7 +41,7 @@ To define a local password. This way VSCode will ask your password at least 4 ti
 
 Open `~/.jupyter/jupyter_notebook_config.json` with your favorite editor then paste:
 
-```
+```json
 {
   "NotebookApp": {
     "token": "MY_SECURE_TOKEN"
@@ -52,7 +53,7 @@ The real trick is here: you need to use a "remote" jupyter notebook, because the
 
 Press `CTRL+SHIFT+P` in VSCode and type `remote jupyter`. When asked for the server address put this:
 
-```
+```shell
 http://localhost:8888/?token=MY_SECURE_TOKEN
 ```
 
@@ -61,8 +62,10 @@ Now reload VSCode. Run in a separate terminal the external Django Shell Plus not
 ```shell
 cd DJANGO_PROJECT
 ```
+
 Then
-```
+
+```shell
 python manage.py shell_plus --notebook --no-browser
 ```
 
