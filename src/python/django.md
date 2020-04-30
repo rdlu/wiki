@@ -73,7 +73,7 @@ Create a new notebook file anywhere inside your project, like in `DJANGO_PROJECT
 
 Before running your first django code, run any notebook cell, it will connect to your "remote" jupyter server and ask for the password, unless you are using the fixed token.
 
-Now FINALLY change the kernel to Django Shell Plus on the VSCode GUI, upper right. 
+Now FINALLY change the kernel to Django Shell Plus on the VSCode GUI, upper right.
 Only then you can import your models and start exploring your django data.
 
 On your first cell put this:
