@@ -8,8 +8,8 @@ pages:
   - tar xvzf mdbook-toc-0.2.4-x86_64-unknown-linux-gnu.tar.gz
   - chmod +x mdbook
   - chmod +x mdbook-toc
-  - ln -s mdbook-toc /bin/mdbook-toc
-  - ln -s mdbook /bin/mdbook
+  - mv mdbook-toc /bin/
+  - mv mdbook /bin/
   - mdbook build
   artifacts:
     paths:
