@@ -10,6 +10,7 @@ pages:
   - chmod +x mdbook-toc
   - mv -v mdbook-toc /bin/mdbook-toc
   - mv -v mdbook /bin/mdbook
+  - echo $PATH
   - mdbook build
   artifacts:
     paths:
