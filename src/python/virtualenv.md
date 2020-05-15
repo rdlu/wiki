@@ -17,3 +17,14 @@ Then for existing projects:
     cd ~/Projects/myproject
 
 Check if the environment auto changes.
+
+## Pipenv
+
+    pacman -S python-pipenv pyenv
+    omf install pyenv
+    pyenv install 3.7.7
+    pipenv
+
+Then on any project folder:
+
+    pipenv install --python 3.7
