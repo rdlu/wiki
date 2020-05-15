@@ -24,6 +24,21 @@ Rereading `/etc/hosts` and restarting:
     echo 'addn-hosts=/etc/hosts' | sudo tee /etc/NetworkManager/dnsmasq.d/hosts.conf > /dev/null
     sudo systemctl restart NetworkManager
 
+### Adding wildcard subdomains to dnsmasq
+
+Create/edit a NetworkManager configuration for dnsmasq hosts:
+
+    sudo micro /etc/NetworkManager/dnsmasq.d/hosts.conf
+
+Add, changing the domain to your preference:
+
+    address=/domain.tld/127.0.0.3
+    address=/sub.domain.tld/127.0.0.4
+
+Restart NetworkManager
+
+    sudo systemctl restart NetworkManager
+
 ## Comparing new configuration files after updates
 
     SUDO_EDITOR=meld sudo -e /etc/file{,.pacnew}
