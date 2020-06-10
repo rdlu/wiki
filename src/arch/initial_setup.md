@@ -36,7 +36,7 @@ Tips and tricks for a ideal initial setup
 
 ## Interesting utilities
 
-    yay -S --needed telegram-desktop foliate
+    yay -S --needed telegram-desktop foliate flameshot neofetch
 
 ## No password for sudo
 
