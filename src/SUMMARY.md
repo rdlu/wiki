@@ -6,6 +6,7 @@
   - [GPG, SSH Auth with Keybase](arch/gpg_keybase.md)
   - [Virtualization](arch/virtualization.md)
   - [Julia System Packages](arch/julia.md)
+  - [Vivaldi Browser Tips](arch/vivaldi.md)
 - [Python Tips](python/initial_setup.md)
   - [VirtualEnvs](python/virtualenv.md)
   - [Django](python/django.md)
