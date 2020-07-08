@@ -1,12 +1,38 @@
-# KVM Setup on Arch
+<!-- toc -->
 
-## Basic installation
+# Virtualization in Archlinux - Docker, Kubernetes, KVM
+
+Tips and tricks for a ideal initial setup
+
+<!-- toc -->
+
+## Docker Setup
+
+    yay -S docker nvidia-container-toolkit
+    sudo usermod -a -G docker $(whoami)
+    sudo systemctl start docker
+    docker info
+
+## Kubernetes using K3s (K8s on K3s)
+
+    yay -S helm kubectl k3s-bin
+    set -gx KUBECONFIG /etc/rancher/k3s/k3s.yaml  #for fish shell
+    export KUBECONFIG=/etc/rancher/k3s/k3s.yaml   #for bash shell
+    sudo systemctl start k3s
+    sudo chown -R root.docker /etc/rancher/k3s
+    kubectl get pods --all-namespaces
+    helm ls --all-namespaces
+
+
+## KVM Setup on Arch
+
+### Basic installation
 
     sudo pacman -S --needed qemu virt-manager virt-viewer dnsmasq vde2 bridge-utils openbsd-netcat ebtables iptables
     sudo yay -S --needed libguestfs
     sudo systemctl enable --now libvirtd.service
 
-## Enable normal user account to use KVM
+### Enable normal user account to use KVM
 
     sudo micro /etc/libvirt/libvirtd.conf
 
