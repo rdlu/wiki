@@ -15,6 +15,8 @@ Tips and tricks for a ideal initial setup
 
 ## Kubernetes using K3s (K8s on K3s)
 
+First you need to setup docker like above.
+
     yay -S helm kubectl k3s-bin
     set -gx KUBECONFIG /etc/rancher/k3s/k3s.yaml  #for fish shell
     export KUBECONFIG=/etc/rancher/k3s/k3s.yaml   #for bash shell
@@ -22,6 +24,16 @@ Tips and tricks for a ideal initial setup
     sudo chown -R root.docker /etc/rancher/k3s
     kubectl get pods --all-namespaces
     helm ls --all-namespaces
+
+### Kubernetes Dashboard using fish shell
+
+    set GITHUB_URL https://github.com/kubernetes/dashboard/releases
+    set VERSION_KUBE_DASHBOARD (curl -w '%{url_effective}' -I -L -s -S ${GITHUB_URL}/latest -o /dev/null | sed -e 's|.*/||')
+    k3s kubectl create -f https://raw.githubusercontent.com/kubernetes/dashboard/${VERSION_KUBE_DASHBOARD}/aio/deploy/recommended.yaml
+
+#### Deleting the dashboard
+
+    k3s kubectl delete ns kubernetes-dashboard
 
 
 ## KVM Setup on Arch
