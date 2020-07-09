@@ -66,9 +66,9 @@ Now apply these new settings:
 
 #### Accessing the dashboard
 
-Obtain the auth token (Bearer token):
+Obtain the auth token (Bearer token), copying to clipboard:
 
-    k3s kubectl -n kubernetes-dashboard describe secret admin-user-token | grep ^token
+    k3s kubectl -n kubernetes-dashboard describe secret admin-user-token | grep '^token' | sed -r 's/token:[[:blank:]]+//g' | xclip -sel clip
 
 Create the proxy
 
