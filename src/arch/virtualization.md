@@ -31,6 +31,53 @@ First you need to setup docker like above.
     set VERSION_KUBE_DASHBOARD (curl -w '%{url_effective}' -I -L -s -S ${GITHUB_URL}/latest -o /dev/null | sed -e 's|.*/||')
     k3s kubectl create -f https://raw.githubusercontent.com/kubernetes/dashboard/${VERSION_KUBE_DASHBOARD}/aio/deploy/recommended.yaml
 
+Now create a RBAC authentication for a single user:
+
+Using `mkdir -pv ~/Projects/k8s; micro ~/Projects/k8s/dashboard.admin-user.yml`, paste this:
+
+```yaml
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: admin-user
+  namespace: kubernetes-dashboard
+```
+Using `micro ~/Projects/k8s/dashboard.admin-user-role.yml`, paste this:
+
+```yaml
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: admin-user
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: cluster-admin
+subjects:
+- kind: ServiceAccount
+  name: admin-user
+  namespace: kubernetes-dashboard
+```
+
+Now apply these new settings:
+
+    cd ~/Projects/k8s
+    k3s kubectl create -f dashboard.admin-user.yml -f dashboard.admin-user-role.yml
+
+#### Accessing the dashboard
+
+Obtain the auth token (Bearer token):
+
+    k3s kubectl -n kubernetes-dashboard describe secret admin-user-token | grep ^token
+
+Create the proxy
+
+    k3s kubectl proxy
+
+Now access: http://localhost:8001/api/v1/namespaces/kubernetes-dashboard/services/https:kubernetes-dashboard:/proxy/
+
+More info: https://rancher.com/docs/k3s/latest/en/installation/kube-dashboard/
+
 #### Deleting the dashboard
 
     k3s kubectl delete ns kubernetes-dashboard
