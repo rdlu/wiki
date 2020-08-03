@@ -50,3 +50,7 @@ After that, we will finally build:
     python setup.py build
     cd build/lib.linux-x86_64-3.7
     cp -R psycopg2/ ~/Projects/{MY_LAMBDA_PROJECT}/
+
+## Exporting PDF using `jupyter nbconvert`
+
+    yay -S texlive-most --needed
