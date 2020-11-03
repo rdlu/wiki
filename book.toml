@@ -1,5 +1,5 @@
 [book]
-title = "CodeForLife Docs"
+title = "moonsetOne Docs"
 authors = ["rdlu"]
 language = "en"
 multilingual = false
@@ -13,6 +13,6 @@ command = "mdbook-toc"
 renderer = ["html"]
 
 [output.html]
-preferred-dark-theme = "ayu"
-default-theme = "ayu"
+preferred-dark-theme = "navy"
+default-theme = "rust"
 google-analytics = "UA-163442290-1"
