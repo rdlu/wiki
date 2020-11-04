@@ -8,6 +8,7 @@
 - Architectural Patterns
     - [Double Dispatch](patterns/avoid-case.md)
     - [Visitor](patterns/visitor.md)
+    - [Iterator](patterns/iterator.md)
 
 ## Frameworks
 

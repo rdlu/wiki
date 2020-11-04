@@ -13,6 +13,7 @@
   - [Architectural Patterns]()
     - [Double Dispatch](ruby/patterns/avoid-case.md)
     - [Visitor](ruby/patterns/visitor.md)
+    - [Iterator](ruby/patterns/iterator.md)
 - [Python Tips](python/initial_setup.md)
   - [VirtualEnvs](python/virtualenv.md)
   - [Django](python/django.md)
