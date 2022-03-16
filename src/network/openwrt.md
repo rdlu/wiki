@@ -1,5 +1,31 @@
 # OpenWRT tricks
 
+## TIM Live Brazil Fiber (FTTH)
+
+It uses PPPoE like the VDSL, but you need to set the VLAN.
+
+Unlike the VDSL connections, for FTTH connections you need the VLAN ID 100.
+
+Unfortunately you can't use the Luci GUI interface. Tested with OpenWrt 21.02.
+
+Edit `/etc/config/network`, specifically the find `wan` and `wan6` interfaces:
+
+```
+config interface 'wan'
+        option proto 'pppoe'
+        option password 'guest'
+        option ipv6 'auto'
+        option username 'guest'
+        option device 'eth0.2'
+        option ifname 'dsl0.100'  ## This is essential
+
+config interface 'wan6'
+        option proto 'dhcpv6'
+        option device 'eth0.2'
+```
+
+IPv6 needs more work, since my connection does not have it enabled, trying to enable inside the `wan6` prevents me the connection with PADO timeouts.
+
 ## Blocking URLs at dnsmasq
 
 ```sh
