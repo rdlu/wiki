@@ -28,7 +28,7 @@ IPv6 needs more work, since my connection does not have it enabled, trying to en
 
 ## Slow PPPoE
 
-If you're having slow throughput using PPPoE, specially under the FTTH connection above, enable `Software flow offloading`.
+If you're having slow throughput using PPPoE, specially under the FTTH connection above, enable `Software flow offloading` inside `Firewall`  settings.
 
 It will make QoS SQM to not work, but since I have plenty bandwith now, I just disabled it.
 
