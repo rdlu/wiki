@@ -26,6 +26,8 @@ config interface 'wan6'
 
 IPv6 needs more work, since my connection does not have it enabled, trying to enable inside the `wan6` prevents me the connection with PADO timeouts.
 
+Be aware that `device 'eth0.2'` can be different for your router model.
+
 ## Slow PPPoE
 
 If you're having slow throughput using PPPoE, specially under the FTTH connection above, enable `Software flow offloading` inside `Firewall`  settings.
