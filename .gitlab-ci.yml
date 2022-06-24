@@ -1,14 +1,14 @@
 pages:
   stage: deploy
   script:
-  - wget https://github.com/badboy/mdbook-toc/releases/download/0.5.1/mdbook-toc-0.5.1-x86_64-unknown-linux-gnu.tar.gz
-  - wget https://github.com/rust-lang/mdBook/releases/download/v0.4.4/mdbook-v0.4.4-x86_64-unknown-linux-gnu.tar.gz
-  - tar xvzf mdbook-v0.4.4-x86_64-unknown-linux-gnu.tar.gz
-  - tar xvzf mdbook-toc-0.5.1-x86_64-unknown-linux-gnu.tar.gz
-  - export PATH=$PATH:./
-  - mdbook build
+    - wget https://github.com/badboy/mdbook-toc/releases/download/0.9.0/mdbook-toc-0.9.0-x86_64-unknown-linux-gnu.tar.gz
+    - wget https://github.com/rust-lang/mdBook/releases/download/v0.4.18/mdbook-v0.4.18-x86_64-unknown-linux-gnu.tar.gz
+    - tar xvzf mdbook-v0.4.18-x86_64-unknown-linux-gnu.tar.gz
+    - tar xvzf mdbook-toc-0.9.0-x86_64-unknown-linux-gnu.tar.gz
+    - export PATH=$PATH:./
+    - mdbook build
   artifacts:
     paths:
-    - public
+      - public
   only:
-  - main
+    - main
