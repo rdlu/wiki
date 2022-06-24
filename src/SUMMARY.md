@@ -7,6 +7,7 @@
   - [Virtualization](arch/virtualization.md)
   - [Julia System Packages](arch/julia.md)
   - [Vivaldi Browser Tips](arch/vivaldi.md)
+- [Elixir](elixir/start.md)
 - [Ruby](ruby/start.md)
   - [Structure Patterns]()
     - [Struct](ruby/patterns/struct.md)
