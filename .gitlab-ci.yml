@@ -1,3 +1,5 @@
+default:
+  image: debian:stable
 pages:
   stage: deploy
   script:
