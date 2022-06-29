@@ -63,3 +63,26 @@ You can use to customize the initial state passed by the caller.
 
 A `handle_call` or `handle_cast` function might return `{:stop, reason, new_state}`.
 `terminate` handles the process exit routines, like saving the state and closing files.
+
+### Debugging and Tracing
+
+#### Check the current state
+
+```elixir
+iex> :sys.get_state(pid)
+%HttpServer.PledgeServer.State{cache_size: 5, pledges: [{"rodrigo", 15}, {"margot", 25}]}
+```
+
+#### Trace changes
+
+```elixir
+iex> :sys.trace(pid, true)
+:ok
+iex> HttpServer.PledgeServer.create_pledge("moe", 20)
+
+*DBG* pledge_server got call {create_pledge,<<"moe">>,20} from <0.152.0>
+```
+
+#### Full status
+
+`:sys.get_status(pid)`
