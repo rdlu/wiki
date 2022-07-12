@@ -8,6 +8,7 @@
   - [Julia System Packages](arch/julia.md)
   - [Vivaldi Browser Tips](arch/vivaldi.md)
 - [Elixir](elixir/start.md)
+  - [State Management](elixir/state.md)
   - [Phoenix Framework](elixir/phoenix.md)
 - [Ruby](ruby/start.md)
   - [Structure Patterns]()
