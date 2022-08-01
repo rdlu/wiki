@@ -1,3 +1,5 @@
+<!-- toc -->
+
 # Elixir language
 
 ## List comprehensions
