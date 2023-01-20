@@ -31,3 +31,4 @@
   - [Google Cloud Tricks](debian/ghost_gce.md)
 - [Quickies](quickies/quickies.md)
 - [WSL](wsl/tips.md)
+- [Podman](ops/podman.md)
