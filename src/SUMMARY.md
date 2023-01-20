@@ -22,6 +22,7 @@
   - [Django](python/django.md)
   - [Fluent Py Resume](python/summary_with_fluent_py.md)
   - [Jupyter Notebook](python/jupyter.md)
+- [Text Editors](text-edit/helix.md)
 - [Other Data Tools](dataops/setup.md)
   - [Redshift](dataops/redshift.md)
   - [MySQL](dataops/mysql.md)
