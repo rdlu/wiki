@@ -38,7 +38,7 @@ __`:tutor` Chapter 4 Recap__
 
 ## Multi Cursor
 
-__`:tutor` Chapter 5 Recap
+__`:tutor` Chapter 5 Recap__
 
  * Type C to duplicate the cursor to the next suitable line
    and Alt-C for previous suitable line.
@@ -50,4 +50,14 @@ __`:tutor` Chapter 5 Recap
 
  * Type Alt-s to split the selection into lines.
 
+## Selection with Search / Replace
 
+__`:tutor` Chapter 6 Recap__
+
+ * Type f / F to extend selection up to & including a character.
+   * Type t / T to extend selection until a character.
+
+ * Type r to replace selected characters.
+
+ * Type . to repeat the last insertion.
+   * Type Alt-. to repeat the last f / t selection.
