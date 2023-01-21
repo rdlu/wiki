@@ -35,3 +35,19 @@ __`:tutor` Chapter 4 Recap__
 
  * Type / to search forward in file, and ? to search backwards.
    * Use n and N to cycle through search matches.
+
+## Multi Cursor
+
+__`:tutor` Chapter 5 Recap
+
+ * Type C to duplicate the cursor to the next suitable line
+   and Alt-C for previous suitable line.
+
+ * Type s to select all instances of a regex pattern inside
+   the current selection.
+
+ * Type & to align selections.
+
+ * Type Alt-s to split the selection into lines.
+
+
