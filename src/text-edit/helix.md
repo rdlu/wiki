@@ -23,3 +23,15 @@ __`:tutor` Chapter 3 Recap__
 
  * Type semicolon ( ; ) to collapse selection.
 
+## Undo / Copy / Search
+
+__`:tutor` Chapter 4 Recap__
+
+ * Type u to undo. Type U to redo.
+
+ * Type y to yank (copy) text and p to paste.
+   * Use Space + y and Space + p to yank / paste on the system
+     clipboard.
+
+ * Type / to search forward in file, and ? to search backwards.
+   * Use n and N to cycle through search matches.
