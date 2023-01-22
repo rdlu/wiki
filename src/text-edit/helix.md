@@ -90,6 +90,20 @@ __`:tutor` Chapter 9 Recap__
    * Type Ctrl-i and Ctrl-o to go forward and backward in the
      jumplist.
 
+# Manipulating Selections
+
+
+__`:tutor` Chapter 10 Recap__
+ * Use ) and ( to cycle the primary selection back and forward
+   through selections respectively.
+   * Type Alt-, to remove the primary selection.
+
+ * Type ~ to alternate case of selected letters.
+   * Use ` and Alt-` to set the case of selected letters to
+     upper and lower respectively.
+
+ * Type S to split selections on regex.
+
 ## Troubleshooting Gnome Alt+` backtick
 
 You can set only Super+` for App switch.
