@@ -61,3 +61,37 @@ __`:tutor` Chapter 6 Recap__
 
  * Type . to repeat the last insertion.
    * Type Alt-. to repeat the last f / t selection.
+
+## Advanced Manipulation
+
+__`:tutor` Chapter 7 Recap__
+
+
+ * Type R to replace the selection with yanked text.
+
+ * Type J to join lines in selection.
+
+ * Type < and > to indent / outdent lines.
+
+ * Type Ctrl-a to increment the selected number.
+   * Type Ctrl-x to decrement the selected number.
+
+## Search
+
+__`:tutor` Chapter 9 Recap__
+
+
+ * Type * to set the search register to the primary selection.
+
+ * Type n / N in Visual mode to add selections on each search
+   match.
+
+ * Type Ctrl-s to save position to the jumplist.
+   * Type Ctrl-i and Ctrl-o to go forward and backward in the
+     jumplist.
+
+## Troubleshooting Gnome Alt+` backtick
+
+You can set only Super+` for App switch.
+
+     gsettings set org.gnome.desktop.wm.keybindings switch-group "['<Super>Above_Tab']"
