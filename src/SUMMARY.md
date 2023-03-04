@@ -32,3 +32,4 @@
 - [Quickies](quickies/quickies.md)
 - [WSL](wsl/tips.md)
 - [Podman](ops/podman.md)
+- [Flatpak](flatpak/Overriding%20with%20Wayland.md)
