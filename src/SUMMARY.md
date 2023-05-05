@@ -34,3 +34,4 @@
 - [Podman](ops/podman.md)
 - [Flatpak](flatpak/Overriding%20with%20Wayland.md)
 - [Fedora](fedora/initial.md)
+  - [LSPs/Neovim/Helix](fedora/lsps.md)
