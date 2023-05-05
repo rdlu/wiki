@@ -4,36 +4,26 @@
 
 ## Yubikey with GPG
 
-This can help with Yubikey card not available after sleep.
-
-Remove opensc
-
-`sudo dnf remove opensc`
-
 File `~/.gnupg/scdaemon.conf`:
 
 ```
-reader-port Yubico Yubi
 pcsc-shared
-
+pcsc-driver /usr/lib64/libpcsclite.so
+card-timeout 5
+disable-ccid
 ```
 
-File `/etc/polkit-1/rules.d/10-pcsc-custom.rules`:
+
+File `~/.gnupg/gpg-agent.conf`:
 
 ```
-polkit.addRule(function(action, subject) {
-    if (action.id == "org.debian.pcsc-lite.access_pcsc" &&
-        subject.user == "rdlu") {
-            return polkit.Result.YES;
-    }
-});
+enable-ssh-support
 
-polkit.addRule(function(action, subject) {
-    if (action.id == "org.debian.pcsc-lite.access_card" &&
-        action.lookup("reader") == 'Yubico YubiKey OTP+FIDO+CCID 00 00' &&
-        subject.user == "rdlu") {
-            return polkit.Result.YES;
-    }
-});
+default-cache-ttl-ssh 10800
+max-cache-ttl-ssh 10800
+max-cache-ttl 300
+default-cache-ttl 300
 
+pinentry-program /usr/bin/pinentry-gnome3
+# pinentry-program /usr/bin/pinentry-curses
 ```
